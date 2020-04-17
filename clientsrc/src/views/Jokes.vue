@@ -14,10 +14,7 @@ export default {
   data() {
     return {};
   },
-  mounted() {
-    console.log(this.$auth);
-    this.$store.dispatch("getJokes");
-  },
+  mounted() {},
   computed: {},
   methods: {},
   components: { CreateJoke }

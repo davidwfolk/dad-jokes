@@ -11,7 +11,7 @@ let baseUrl = location.host.includes("localhost")
 
 let api = Axios.create({
   baseURL: baseUrl + "api",
-  timeout: 3000,
+  timeout: 10000,
   withCredentials: true
 });
 
@@ -56,6 +56,14 @@ export default new Vuex.Store({
       try {
         let res = await api.get('jokes')
         commit('setJokes', res.data)
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    async sortJokes({commit, dispatch }, userJoke){
+      try {
+        let res = await api.get('profile');
+      commit('setUserJokes', res.data)
       } catch (error) {
         console.error(error)
       }

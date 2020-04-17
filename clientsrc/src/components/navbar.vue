@@ -15,17 +15,20 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" :class="{ active: $route.name == 'Home' }">
-          <router-link :to="{ name: 'Home' }" class="nav-link">Home</router-link>
+          <router-link :to="{ name: 'Home' }" class="nav-link">The Startin' Place</router-link>
         </li>
         <li class="nav-item" :class="{ active: $route.name == 'Jokes' }">
-          <router-link :to="{ name: 'Jokes' }" class="nav-link">Jokes</router-link>
+          <router-link :to="{ name: 'Jokes' }" class="nav-link">Make me giggle</router-link>
+        </li>
+        <li class="nav-item" :class="{ active: $route.name == 'allJokes' }">
+          <router-link :to="{ name: 'allJokes' }" class="nav-link">Show me all the jokes</router-link>
         </li>
         <li
           class="nav-item"
           v-if="$auth.isAuthenticated"
           :class="{ active: $route.name == 'Profile' }"
         >
-          <router-link class="nav-link" :to="{ name: 'Profile' }">Profile</router-link>
+          <router-link class="nav-link" :to="{ name: 'Profile' }">My Face</router-link>
         </li>
       </ul>
       <span class="navbar-text">
